@@ -1,0 +1,2 @@
+"use strict";!function(){fullpage.initialize("#fullpage",{menu:".menu",anchors:["about","experience","projects"],navigation:!0}),particleground(document.getElementById("particles"),{density:8e3,directionX:"right",directionY:"up",dotColor:"#333",lineColor:"#555",maxSpeedX:.9,maxSpeedY:.9,minSpeedX:.4,minSpeedY:.4,parallaxMultiplier:10,particleRadius:8,proximity:90})}();
+//# sourceMappingURL=app.js.map
