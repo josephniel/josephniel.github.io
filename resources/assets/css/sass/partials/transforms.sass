@@ -1,0 +1,10 @@
+@mixin transform($transforms)
+  -moz-transform: $transforms
+  -ms-transform: $transforms
+  -o-transform: $transforms
+  -webkit-transform: $transforms
+  transform: $transforms
+
+@mixin translate($x, $y)
+  @include transform(translateX($x))
+  @include transform(translateY($y))
