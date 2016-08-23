@@ -208,8 +208,6 @@
                 thumbnailWidth = thumbnailDimensions.width,
                 thumbnailSpacing = thumbnailDimensions.spacing;
             
-            console.log(thumbnailWidth);
-            console.log(thumbnailEls.length);
             return (((thumbnailWidth + thumbnailSpacing) * thumbnailEls.length) - thumbnailSpacing)
         }
 
