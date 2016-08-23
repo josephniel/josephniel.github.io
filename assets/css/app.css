@@ -528,6 +528,7 @@ a {
 .slideshow {
     height: 100%;
     max-height: 700px;
+    max-width: 1200px;
     width: 100%;
     position: relative;
 }
@@ -630,7 +631,6 @@ a {
         display: flex;
         justify-content: center;
         max-height: 100px;
-        max-width: 1200px;
         overflow: hidden;
         position: relative;
         width: 100%;
