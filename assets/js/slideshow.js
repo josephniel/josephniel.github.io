@@ -168,7 +168,8 @@
             var parentWidth = thumbnailsContainer.offsetWidth,
                 pseudoContainerWidth = getPseudoThumbnailContainerWidth(),
                 initialRightOffset = (pseudoContainerWidth - parentWidth);
-
+        
+            console.log(pseudoContainerWidth);
             createPseudoThumbnailContainer();
 
             var pseudoThumbnailContainer = getPseudoThumbnailContainer();
