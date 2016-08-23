@@ -70,10 +70,10 @@
         mainContainer = document.getElementsByClassName(parameters.slideshowClass)[0];
 
         // Get contents container element
-        contentContainer = mainContainer.getElementsByClassName      (parameters.contentContainerClass)[0];
+        contentContainer = mainContainer.getElementsByClassName(parameters.contentContainerClass)[0];
         
         // Get thumbnails container element
-        thumbnailsContainer = mainContainer.getElementsByClassName      (parameters.thumbnailContainerClass)[0];
+        thumbnailsContainer = mainContainer.getElementsByClassName(parameters.thumbnailContainerClass)[0];
 
         // Initializes thumbnails
         initializeThumbnails();
@@ -152,8 +152,9 @@
                     thumbnailEls[i].style.marginRight = thumbnailSpacing + "px";
             }
             return {
-                "width" : thumbnailWidth + thumbnailSpacing,
-                "height": thumbnailHeight
+                "width" : thumbnailWidth,
+                "height": thumbnailHeight,
+                "spacing": thumbnailSpacing
             };
         }
 
@@ -204,8 +205,8 @@
          */
         function getPseudoThumbnailContainerWidth() {
             var thumbnailEls = thumbnailsContainer.getElementsByClassName(parameters.thumbnailClass),
-                thumbnailWidth = thumbnailEls[0].offsetWidth,
-                thumbnailSpacing = 0;
+                thumbnailWidth = thumbnailDimensions.width,
+                thumbnailSpacing = thumbnailDimensions.spacing;
             
             console.log(thumbnailWidth);
             console.log(thumbnailEls.length);
@@ -235,7 +236,7 @@
          */
         function setThumbnailNavigation() {
             var mainWidth = thumbnailsContainer.offsetWidth,
-                thumbnailWidth = thumbnailDimensions.width,
+                thumbnailWidth = thumbnailDimensions.width + thumbnailDimensions.spacing,
                 navigationWidth = mainWidth % thumbnailWidth,
                 navigationWidth = (navigationWidth < 30) ? navigationWidth + thumbnailWidth : navigationWidth;
                 
@@ -291,7 +292,7 @@
          */
         function initializeThumbnailNavigation() {
             var mainWidth = thumbnailsContainer.offsetWidth,
-                thumbnailWidth = thumbnailDimensions.width,
+                thumbnailWidth = thumbnailDimensions.width + thumbnailDimensions.spacing,
                 navigationWidth = mainWidth % thumbnailWidth,
                 navigationWidth = (navigationWidth < 30) ? navigationWidth + thumbnailWidth : navigationWidth,
                 thumbnailNavigation = getThumbnailNavigation(),
