@@ -168,8 +168,7 @@
             var parentWidth = thumbnailsContainer.offsetWidth,
                 pseudoContainerWidth = getPseudoThumbnailContainerWidth(),
                 initialRightOffset = (pseudoContainerWidth - parentWidth);
-        
-            console.log(pseudoContainerWidth);
+    
             createPseudoThumbnailContainer();
 
             var pseudoThumbnailContainer = getPseudoThumbnailContainer();
@@ -207,7 +206,9 @@
             var thumbnailEls = thumbnailsContainer.getElementsByClassName(parameters.thumbnailClass),
                 thumbnailWidth = thumbnailEls[0].offsetWidth,
                 thumbnailSpacing = 0;
-
+            
+            console.log(thumbnailWidth);
+            console.log(thumbnailEls.length);
             return (((thumbnailWidth + thumbnailSpacing) * thumbnailEls.length) - thumbnailSpacing)
         }
 
